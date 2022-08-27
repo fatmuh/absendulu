@@ -28,6 +28,17 @@ Route::middleware(['auth','ceklevel:Admin,Karyawan'])->group(function () {
     Route::get('/absensi', [PegawaiController::class, 'absensi'])->name('absensi');
     Route::get('/add-user', [PegawaiController::class, 'adduser'])->name('adduser');
     Route::post('/save-user', [PegawaiController::class, 'saveuser'])->name('saveuser');
+    Route::get('/data-user', [PegawaiController::class, 'data_user'])->name('data-user');
+    Route::get('/delete/{id}', [PegawaiController::class,'delete'])->name('delete');
+
+    Route::get('/show/{id}', [PegawaiController::class,'show'])->name('show');
+    Route::post('/update/{id}', [PegawaiController::class,'update'])->name('update');
+
+    Route::get('/rekap-absensi',[PresensiController::class,'halamanrekap'])->name('rekap-absensi');
+    Route::get('/rekap-absensi/{tglawal}/{tglakhir}',[PresensiController::class,'tampildatakeseluruhan'])->name('rekap-absensi-keseluruhan');
+
+    Route::get('/account', [PegawaiController::class, 'account'])->name('account');
+    Route::put('/update-profile', [PegawaiController::class, 'update_profile'])->name('update-profile');
 });
 
 Route::middleware(['auth','ceklevel:Karyawan'])->group(function () {

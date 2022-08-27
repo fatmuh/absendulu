@@ -16,7 +16,7 @@
 <body class="sb-nav-fixed" onload="realtimeClock()">
     <nav class="sb-topnav navbar navbar-expand navbar-light">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="absensi"><img src="img/Judul.png" alt="Absen Dulu" width="180px"></a>
+        <a class="navbar-brand ps-3" href="absensi"><img src="{{ asset('img/Judul.png') }}" width="180px"></a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button>
@@ -27,11 +27,11 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Absen Dulu</div>
-                        <a class="nav-link" href="absensi">
+                        <a class="nav-link" href="/absensi">
                             <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
                             Home
                         </a>
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="/account">
                             <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                             Account
                         </a>
@@ -42,11 +42,11 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-user-plus"></i></div>
                             Tambah User
                         </a>
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="/data-user">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Data User
                         </a>
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="/rekap-absensi">
                             <div class="sb-nav-link-icon"><i class="fas fa-file"></i></div>
                             Laporan Absensi
                         </a>

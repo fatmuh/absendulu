@@ -1,6 +1,6 @@
-<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-<link href="../css/styles.css" rel="stylesheet" />
-<script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+<link href="{{ url('https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css') }}" rel="stylesheet" />
+<link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+<script src="{{ url('https://use.fontawesome.com/releases/v6.1.0/js/all.js') }}" crossorigin="anonymous"></script>
 <script src="{{ asset('js/jam.js') }}"></script>
     <style>
         #watch {

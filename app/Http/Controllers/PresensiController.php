@@ -87,6 +87,17 @@ class PresensiController extends Controller
         //
     }
 
+    public function halamanrekap()
+    {
+        return view('presensi.rekap-absensi');
+    }
+
+    public function tampildatakeseluruhan($tglawal, $tglakhir)
+    {
+        $presensi = Presensi::with('user')->whereBetween('tgl',[$tglawal, $tglakhir])->orderBy('tgl','asc')->get();
+        return view('presensi.laporan-karyawan',compact('presensi'));
+    }
+
     public function presensipulang(){
         $timezone = 'Asia/Jakarta';
         $date = new DateTime('now', new DateTimeZone($timezone));
