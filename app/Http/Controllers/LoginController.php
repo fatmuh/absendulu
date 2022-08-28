@@ -15,11 +15,11 @@ class LoginController extends Controller
         if(Auth::attempt($request->only('no_pegawai','password'))){
             return redirect('/absensi');
         }
-        return redirect('/');
+        return redirect('/login')->with('toast_error', 'Kartu tidak terdaftar!');
     }
 
     public function logout(){
         Auth::logout();
-        return redirect('/');
+        return redirect('/login');
     }
 }
